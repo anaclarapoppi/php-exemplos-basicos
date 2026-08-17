@@ -8,7 +8,7 @@ foreach ($frutas as $indice => $fruta) {
     echo "Posição $indice: $fruta <br>";
 }
 
-// Array (Linhas e colunas
+// Array (Linhas e colunas) com pilotos de F1
 
 $matriz = [
     ["Max Verstappen", "Oscar Piastri", "Lando Norris"],
