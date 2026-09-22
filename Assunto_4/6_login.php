@@ -23,7 +23,8 @@
         $senha = $_POST['senha'];
 
         // Abre o arquivo usuarios.txt para leitura
-        $arquivo = fopen('usuarios.txt', 'r');
+        $arquivo = fopen('../Assunto_3/usuarios.txt', 'r');
+        // $arquivo = fopen('usuarios.txt', 'r');
         $login_sucesso = false;
 
         // Lê cada linha do arquivo
@@ -41,9 +42,9 @@
         // Fecha o arquivo
         fclose($arquivo);
 
-        // Exibe a mensagem de sucesso ou erro
+        // Exibe a mensagem (Feedback) de sucesso ou erro
         if ($login_sucesso) {
-            echo "<p>Login realizado com sucesso! Bem-vindo, $nome!</p>";
+            echo "<p style='color: darkgreen;'>Login realizado com sucesso!<br> Bem-vindo, $nome!</p>";
         } else {
             echo "<p style='color: red;'>Usuário ou senha incorretos.</p>";
         }

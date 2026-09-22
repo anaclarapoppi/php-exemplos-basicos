@@ -16,23 +16,25 @@
         <textarea name="mensagem" required></textarea><br>
 
         <button type="submit">Enviar</button>
+
     </form>
 
+    <!-- Parte da lógica -->
     <?php
-    // Verifica se o formulário foi enviado
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        // Recebe os valores enviados pelo formulário
-        $nome = $_POST['nome'];
-        $email = $_POST['email'];
-        $mensagem = $_POST['mensagem'];
+            // Recebe os dados
+            $nome = $_POST['nome'];
+            $email = $_POST['email'];
+            $mensagem = $_POST['mensagem'];
 
-        // Valida se os campos não estão vazios e o email é válido
-        if (!empty($nome) && !empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($mensagem)) {
-            echo "<p style='color: green;'>Feedback enviado com sucesso!</p>";
-        } else {
-            echo "<p style='color: red;'>Por favor, preencha todos os campos corretamente.</p>";
+            // Validação dos campos (Se estão vazios e se o e-mail é válido)
+            if (!empty($nome) && !empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($mensagem) ) {
+                echo "<p style='color: darkgreen;'>Feedback enviado com sucesso!</p>";
+            } else {
+                echo "<p style='color: red;'>Preencha todos os campos corretamente.</p>";
+            }
         }
-    }
     ?>
+
 </body>
 </html>

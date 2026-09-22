@@ -1,9 +1,0 @@
-anitta,1234
-dfideliz,12345
-belo,12345
-péricles,12345
-belo,123
-ig,22
-ig,123
-hana,123
-lana;123
